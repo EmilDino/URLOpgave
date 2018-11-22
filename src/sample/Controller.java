@@ -1,11 +1,24 @@
 package sample;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 
-import java.io.File;
 
 public class Controller {
-    public void writeReadme(ActionEvent actionEvent) {
 
+    @FXML
+    TextArea textArea;
+
+    @FXML
+    Button readButton;
+
+    @FXML
+    Button writeButton;
+
+    public void readFile() {
+        Readme x = new Readme();
+
+        textArea.setText(x.readme());
     }
 }
